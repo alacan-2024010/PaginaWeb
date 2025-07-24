@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión en Essence de François</title>
+    <link rel="stylesheet" href="Styles/index.css">
+
+</head>
+<body>
+    <video autoplay muted loop id="video-fondo">
+        <source src="../Videos/Arena.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+    </video>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-title">
+                <span class="login-text">Iniciar Sesion</span>
+            </div>
+            <div class="login-form">
+                <div class="input-group">
+                    <input required placeholder="Correo" class="login-input" type="text" autocomplete="off" />
+                </div>
+                <div class="input-group">
+                    <input required placeholder="Contraseña" class="login-input" type="password" autocomplete="new-password" />
+                </div>
+                <form action="principal.html" method="GET">
+                    <button type="submit" class="login-btn">Ingresar</button>
+                </form>
+                <div class="register-link">
+                    <a href="registrarse.html">¿No tienes cuenta? Regístrate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

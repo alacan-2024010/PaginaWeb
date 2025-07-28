@@ -223,3 +223,138 @@ h2 {
     height: 60px;
     object-fit: contain;
 }
+
+@media screen and (max-width: 992px) {
+    h2 {
+        font-size: 48px;
+    }
+
+    .detalle-producto {
+        flex-direction: column;
+        gap: 20px;
+        padding: 16px;
+    }
+
+    .detalle-producto img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .informacion-producto {
+        text-align: center;
+    }
+
+    .informacion-producto h2 {
+        font-size: 24px;
+    }
+
+    .informacion-producto p {
+        font-size: 18px;
+    }
+
+    .informacion-producto .precio {
+        font-size: 22px;
+    }
+
+    .informacion-producto a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 100px auto;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .perfumes {
+        gap: 1rem;
+        padding: 12px;
+    }
+
+    .perfumes-productos {
+        min-width: 180px;
+        padding: 0.75rem;
+    }
+
+    .perfumes-productos img {
+        height: 160px;
+        margin-bottom: 24px;
+    }
+
+    .nombre-producto {
+        font-size: 1rem;
+    }
+
+    .precio {
+        font-size: 1rem;
+    }
+
+    .btn-producto {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .detalle-producto img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .informacion-producto p {
+        font-size: 16px;
+    }
+
+    .informacion-producto button,
+    .informacion-producto a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 28px;
+    }
+
+    .perfumes-productos {
+        min-width: 160px;
+    }
+
+    .perfumes-productos img {
+        height: 140px;
+    }
+
+    .detalle-producto img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .btn-volver {
+        top: 10px;
+        left: 10px;
+    }
+
+    .flecha-icono {
+        width: 40px;
+        height: 40px;
+    }
+
+    .informacion-producto h2 {
+        font-size: 20px;
+    }
+
+    .informacion-producto p,
+    .informacion-producto .precio {
+        font-size: 16px;
+    }
+
+    .informacion-producto a {
+        width: 100%;
+        margin: 10px auto 0 auto;
+        text-align: center;
+    }
+}

@@ -1,19 +1,25 @@
-css
 
-Contraer
-
-Ajuste
-
-Copiar
-/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
+html, body {
+    width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background: #fff8f5;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
 }
 
 @font-face {
@@ -41,13 +47,6 @@ html {
     src: url('../Fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
 }
 
-body {
-    background: #fff8f5;
-    color: #000000;
-    font-family: Arial, sans-serif;
-    min-height: 100dvh;
-}
-
 header {
     background-color: #664824;
     padding: clamp(0.5rem, 3vw, 1rem) clamp(1rem, 4vw, 2rem);
@@ -57,6 +56,8 @@ header {
     font-weight: bold;
     letter-spacing: 1.5px;
     font-family: 'GreatVibes', sans-serif;
+    position: relative;
+    z-index: 2;
 }
 
 nav {
@@ -66,6 +67,8 @@ nav {
     gap: clamp(10px, 3vw, 15px);
     padding: clamp(8px, 2vw, 10px);
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
 }
 
 nav a {
@@ -126,14 +129,16 @@ nav a:hover {
 }
 
 .principal {
-    position: relative;
-    width: 100%;
-    min-height: clamp(320px, 60vw, 600px);
-    padding: clamp(10px, 3vw, 20px);
+    flex: 1;
+    width: 100vw;
+    min-height: 100dvh;
+    padding: 0;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    position: relative;
 }
 
 .imagen-principal {
@@ -141,6 +146,7 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     top: 0;
     left: 0;
     z-index: 0;
@@ -158,6 +164,7 @@ nav a:hover {
         2px 2px 6px #00000099;
     font-family: 'PlayfairDisplay', sans-serif;
     text-align: center;
+    padding: clamp(10px, 3vw, 20px);
 }
 
 footer {
@@ -188,12 +195,14 @@ footer {
 
     .titulo-principal {
         font-size: clamp(24px, 6vw, 36px);
+        padding: clamp(10px, 2vw, 15px);
     }
 
     .principal {
-        min-height: clamp(300px, 50vw, 400px);
+        width: 100vw;
+        min-height: 100dvh;
         height: auto;
-        padding: clamp(10px, 2vw, 15px);
+        padding: 0;
     }
 
     .opciones {
@@ -228,12 +237,14 @@ footer {
 
     .titulo-principal {
         font-size: clamp(20px, 5vw, 28px);
+        padding: clamp(8px, 2vw, 10px);
     }
 
     .principal {
-        min-height: clamp(250px, 45vw, 320px);
+        width: 100vw;
+        min-height: 100dvh;
         height: auto;
-        padding: clamp(8px, 2vw, 10px);
+        padding: 0;
     }
 }
 
@@ -250,12 +261,14 @@ footer {
 
     .titulo-principal {
         font-size: clamp(18px, 4.5vw, 24px);
+        padding: clamp(6px, 1.5vw, 8px);
     }
 
     .principal {
-        min-height: clamp(200px, 40vw, 280px);
+        width: 100vw;
+        min-height: 100dvh;
         height: auto;
-        padding: clamp(6px, 1.5vw, 8px);
+        padding: 0;
     }
 
     .opciones {

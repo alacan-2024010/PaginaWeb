@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Inicio de Sesión en Essence de François</title>
     <link rel="stylesheet" href="Styles/index.css">
+    <script>
+        function validarFormulario(event) {
+            var usuario = document.getElementsByName("usuario")[0].value;
+            var contrasena = document.getElementsByName("contrasena")[0].value;
+            var error = '';
+            if (usuario !== "1") {
+                error += 'El correo debe ser "1".\n';
+            }
+            if (contrasena !== "1") {
+                error += 'La contraseña debe ser "1".\n';
+            }
 
+            if (error) {
+                alert(error);
+                event.preventDefault();
+            }
+        }
+    </script>
 </head>
 <body>
     <video autoplay muted loop id="video-fondo">
@@ -19,7 +36,7 @@
                 <span class="login-text">Iniciar Sesion</span>
             </div>
             <div class="login-form">
-                <form action="principal.html" method="GET">
+                <form action="principal.html" method="GET" onsubmit="validarFormulario(event)">
                     <div class="input-group">
                         <input required placeholder="Correo" name="usuario" class="login-input" type="text" autocomplete="off" />
                     </div>

@@ -1,11 +1,189 @@
+css
+
+Contraer
+
+Ajuste
+
+Copiar
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background: #fff8f5;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: 'GreatVibes';
+    src: url('../Fonts/GreatVibes-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../Fonts/Oswald-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lobster';
+    src: url('../Fonts/Lobster-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Pacifico';
+    src: url('../Fonts/Pacifico-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('../Fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
 #video-fondo {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100vw;
+    min-width: 100vw;
+    height: 100dvh;
+    min-height: 100dvh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+header {
+    background-color: #664824;
+    padding: clamp(0.5rem, 3vw, 1rem) clamp(1rem, 4vw, 2rem);
+    text-align: center;
+    color: #FFB900;
+    font-size: clamp(36px, 8vw, 60px);
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-family: 'GreatVibes', sans-serif;
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    background: #050505;
+    display: flex;
+    justify-content: center;
+    gap: clamp(10px, 3vw, 15px);
+    padding: clamp(8px, 2vw, 10px);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: clamp(0.95rem, 2.5vw, 1rem);
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FFB900;
+}
+
+.seleccion-catalogo {
+    position: relative;
+    display: inline-block;
+}
+
+.btn-catalogo {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: clamp(0.95rem, 2.5vw, 1rem);
+    cursor: pointer;
+    padding: 0 clamp(8px, 2vw, 10px);
+}
+
+.btn-catalogo:hover {
+    color: #FFB900;
+}
+
+.opciones {
+    display: none;
+    position: absolute;
+    background-color: #050505;
+    min-width: clamp(100px, 25vw, 120px);
+    box-shadow: 0px 8px 16px #00000033;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.opciones a {
+    display: block;
+    padding: clamp(4px, 1.5vw, 6px) clamp(8px, 2vw, 10px);
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: clamp(10px, 2.5vw, 12px);
+}
+
+.opciones a:hover {
+    color: #FFB900;
+    background-color: #1a1a1a;
+}
+
+.seleccion-catalogo:hover .opciones {
+    display: block;
+}
+
+.principal {
+    width: 100vw;
+    min-height: 100dvh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+}
+
+.imagen-principal {
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
+    object-position: center;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.titulo-principal {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: clamp(28px, 8vw, 48px);
+    font-weight: 700;
+    text-shadow:
+        2px 2px 8px #FFB900,
+        0 0 10px #FFB900,
+        2px 2px 6px #00000099;
+    font-family: 'PlayfairDisplay', sans-serif;
+    text-align: center;
+    padding: clamp(10px, 3vw, 20px);
 }
 
 .container {
@@ -13,6 +191,7 @@
     margin: clamp(80px, 15vw, 120px) auto clamp(80px, 15vw, 130px);
     padding: 0 clamp(12px, 3vw, 16px);
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 h2 {
@@ -233,9 +412,55 @@ h2 {
     object-fit: contain;
 }
 
+footer {
+    background: #000000;
+    text-align: center;
+    padding: clamp(0.8rem, 2vw, 1rem);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    margin-top: 0;
+}
+
 @media screen and (max-width: 992px) {
+    header {
+        font-size: clamp(30px, 7vw, 48px);
+        padding: clamp(0.5rem, 2vw, 0.8rem) clamp(0.8rem, 3vw, 1rem);
+    }
+
+    nav {
+        gap: clamp(8px, 2vw, 12px);
+        padding: clamp(6px, 1.5vw, 8px);
+    }
+
+    nav a,
+    .btn-catalogo {
+        font-size: clamp(0.9rem, 2.2vw, 0.95rem);
+    }
+
+    .titulo-principal {
+        font-size: clamp(24px, 6vw, 36px);
+        padding: clamp(10px, 2vw, 15px);
+    }
+
+    .principal {
+        width: 100vw;
+        min-height: 100dvh;
+        height: auto;
+        padding: 0;
+    }
+
+    .opciones {
+        min-width: clamp(90px, 20vw, 110px);
+        font-size: clamp(9px, 2.2vw, 11px);
+    }
+
     h2 {
         font-size: clamp(24px, 6vw, 36px);
+    }
+
+    .container {
+        margin: clamp(60px, 12vw, 80px) auto;
     }
 
     .detalle-producto {
@@ -273,8 +498,43 @@ h2 {
 }
 
 @media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: clamp(4px, 1.5vw, 6px);
+        padding: clamp(4px, 1vw, 6px);
+    }
+
+    nav a,
+    .btn-catalogo {
+        font-size: clamp(0.85rem, 2.2vw, 0.9rem);
+        text-align: center;
+    }
+
+    .seleccion-catalogo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .opciones {
+        min-width: 100%;
+        left: 0;
+        font-size: clamp(9px, 2.2vw, 10px);
+    }
+
+    .titulo-principal {
+        font-size: clamp(20px, 5vw, 28px);
+        padding: clamp(8px, 2vw, 10px);
+    }
+
+    .principal {
+        width: 100vw;
+        min-height: 100dvh;
+        height: auto;
+        padding: 0;
+    }
+
     .container {
-        margin: clamp(60px, 12vw, 80px) auto;
+        margin: clamp(40px, 10vw, 60px) auto;
     }
 
     h2 {
@@ -316,6 +576,37 @@ h2 {
 }
 
 @media screen and (max-width: 480px) {
+    header {
+        font-size: clamp(24px, 6vw, 36px);
+        padding: clamp(0.4rem, 1.5vw, 0.6rem);
+    }
+
+    nav a,
+    .btn-catalogo {
+        font-size: clamp(0.8rem, 2vw, 0.85rem);
+    }
+
+    .titulo-principal {
+        font-size: clamp(18px, 4.5vw, 24px);
+        padding: clamp(6px, 1.5vw, 8px);
+    }
+
+    .principal {
+        width: 100vw;
+        min-height: 100dvh;
+        height: auto;
+        padding: 0;
+    }
+
+    .opciones {
+        font-size: clamp(8px, 2vw, 10px);
+        min-width: 100%;
+    }
+
+    .container {
+        margin: clamp(20px, 5vw, 40px) auto;
+    }
+
     h2 {
         font-size: clamp(18px, 4.5vw, 24px);
     }
@@ -356,5 +647,10 @@ h2 {
     .informacion-producto a {
         font-size: clamp(11px, 2.2vw, 12px);
         padding: clamp(6px, 1.5vw, 8px) clamp(10px, 2vw, 12px);
+    }
+
+    footer {
+        font-size: clamp(0.8rem, 2vw, 0.9rem);
+        padding: clamp(0.6rem, 1.5vw, 0.8rem);
     }
 }

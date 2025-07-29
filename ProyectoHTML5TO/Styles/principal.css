@@ -1,3 +1,21 @@
+css
+
+Contraer
+
+Ajuste
+
+Copiar
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
 @font-face {
     font-family: 'GreatVibes';
     src: url('../Fonts/GreatVibes-Regular.ttf') format('truetype');
@@ -24,13 +42,10 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
     background: #fff8f5;
     color: #000000;
     font-family: Arial, sans-serif;
-    min-height: 100vh;
-    box-sizing: border-box;
+    min-height: 100dvh;
 }
 
 header {
@@ -112,7 +127,8 @@ nav a:hover {
 
 .principal {
     position: relative;
-    height: clamp(320px, 60vw, 600px);
+    width: 100%;
+    min-height: clamp(320px, 60vw, 600px);
     padding: clamp(10px, 3vw, 20px);
     display: flex;
     align-items: center;
@@ -154,7 +170,6 @@ footer {
     margin-top: 0;
 }
 
-
 @media screen and (max-width: 992px) {
     header {
         font-size: clamp(30px, 7vw, 48px);
@@ -176,7 +191,8 @@ footer {
     }
 
     .principal {
-        height: clamp(300px, 50vw, 400px);
+        min-height: clamp(300px, 50vw, 400px);
+        height: auto;
         padding: clamp(10px, 2vw, 15px);
     }
 
@@ -189,8 +205,8 @@ footer {
 @media screen and (max-width: 768px) {
     nav {
         flex-direction: column;
-        gap: clamp(6px, 2vw, 10px);
-        padding: clamp(6px, 1.5vw, 8px);
+        gap: clamp(4px, 1.5vw, 6px);
+        padding: clamp(4px, 1vw, 6px);
     }
 
     nav a,
@@ -215,7 +231,8 @@ footer {
     }
 
     .principal {
-        height: clamp(250px, 45vw, 320px);
+        min-height: clamp(250px, 45vw, 320px);
+        height: auto;
         padding: clamp(8px, 2vw, 10px);
     }
 }
@@ -236,7 +253,8 @@ footer {
     }
 
     .principal {
-        height: clamp(200px, 40vw, 280px);
+        min-height: clamp(200px, 40vw, 280px);
+        height: auto;
         padding: clamp(6px, 1.5vw, 8px);
     }
 

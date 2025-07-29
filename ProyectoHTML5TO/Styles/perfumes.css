@@ -1,11 +1,4 @@
-css
 
-Contraer
-
-Ajuste
-
-Copiar
-/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -208,7 +201,8 @@ h2 {
     scrollbar-width: thin;
     scrollbar-color: #8c4a18 #f2e8dc;
     gap: clamp(12px, 3vw, 16px);
-    padding: clamp(12px, 3vw, 16px);
+    padding: clamp(12px, 3vw, 16px) clamp(20px, 5vw, 30px);
+    justify-content: center; 
 }
 
 .perfumes::-webkit-scrollbar {
@@ -495,6 +489,12 @@ footer {
         font-size: clamp(12px, 2.5vw, 13px);
         padding: clamp(6px, 1.5vw, 8px) clamp(12px, 2.5vw, 16px);
     }
+
+    .perfumes {
+        gap: clamp(8px, 2vw, 12px);
+        padding: clamp(8px, 2vw, 12px) clamp(15px, 4vw, 20px); 
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -543,7 +543,8 @@ footer {
 
     .perfumes {
         gap: clamp(8px, 2vw, 12px);
-        padding: clamp(8px, 2vw, 12px);
+        padding: clamp(8px, 2vw, 12px) clamp(10px, 3vw, 15px); 
+        justify-content: center;
     }
 
     .perfumes-productos {
@@ -609,6 +610,12 @@ footer {
 
     h2 {
         font-size: clamp(18px, 4.5vw, 24px);
+    }
+
+    .perfumes {
+        gap: clamp(6px, 1.5vw, 8px);
+        padding: clamp(6px, 1.5vw, 8px) clamp(10px, 3vw, 15px); 
+        justify-content: center;
     }
 
     .perfumes-productos {
